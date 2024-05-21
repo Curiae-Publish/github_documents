@@ -57,7 +57,7 @@ Web上にファイル群を保存し、各PCからGitを通して変更履歴の
   - ネットワーク上で管理されるリポジトリ、今回はGitHub上にある
 
 > [!NOTE]
-> [この記事の図](https://qiita.com/Coa3/items/d0a43b22a130f74a2685#2-git%E3%82%92%E7%90%86%E8%A7%A3%E3%81%99%E3%82%8B)を見るとわかりやすいかも
+> [この記事の図](https://qiita.com/Coa3/items/d0a43b22a130f74a2685#2-git%E3%82%92%E7%90%86%E8%A7%A3%E3%81%99%E3%82%8B)を見るとわかりやすい
 
 - コミット (Commit)
   - 作業フォルダの内容を、ローカルリポジトリ（特定のブランチ）に記録すること
@@ -65,7 +65,9 @@ Web上にファイル群を保存し、各PCからGitを通して変更履歴の
   - リポジトリの主となるブランチ
   - 基本的に異常がない状態にされる
 - ブランチ (Branch)
-  - あるブランチから分岐させて
+  - あるブランチから分岐させたブランチを作成すること
+- チェックアウト (Checkout)
+  - コミット先のブランチを変更すること
 - マージ (Marge)
   - あるブランチを他のブランチ（例えばMainブランチ）に取り込むこと
 
@@ -74,15 +76,41 @@ Web上にファイル群を保存し、各PCからGitを通して変更履歴の
 - クローン (Clone)
   - リモートリポジトリ（の特定のブランチ）の内容をコピーし、ローカルリポジトリにコピーすること
 - プル (Pull)
-  - リモートリポジトリの変更内容をローカルリポジトリに反映させること
+  - （現在のブランチの）リモートリポジトリの変更内容をローカルリポジトリに反映させること
 - プッシュ (Push)
-  - ローカルリポジトリの変更内容をリモートリポジトリに反映させること
+  - （現在のブランチの）ローカルリポジトリの変更内容をリモートリポジトリに反映させること
+
+> [!NOTE]
+> 現在のブランチではないブランチは、VSCodeのGUI上ではプルされない  
+> プルしたいブランチにチェックアウトしてから、そのブランチでプルしよう  
+> めんどくさい人は`git pull --all`で全てのブランチを取得しちゃおう  
+> （追跡していないブランチは`git fetch --all`だけでいいのかな？わからん  
+> cf. <https://qiita.com/muraikenta/items/e590a380191971f9c4c3>
 
 ---
 
 # GitHubを使おう
 
 ## 実際の開発の流れ
+
+```mermaid
+flowchart LR
+
+clone[Clone]
+branch[Branch]
+checkout[Checkout]
+develop[Develop]
+push[Push]
+pull[Pull]
+marge[Marge]
+pr[Pull Request]
+commit[Commit]
+push'[Push]
+
+clone & pull -->|Mainブランチで| develop
+clone & pull --> branch --> checkout --> develop ==> commit ==> push
+push' -..-> pr -.-> marge
+```
 
 ### GitHub上での操作
 
