@@ -262,6 +262,9 @@ push' -..-> pr -.-> marge
 
 ### 3.1.2. VSCode上でGitHubのコマンドを使う
 
+- VSCode上で![ソース管理](images/source.png)を開き、![dot menu](images/menu.png)から色々なGitコマンドを実行することができる
+- bashターミナルを起動してGitコマンドを打つことでも実行できるが、今回は省略
+
 ## 3.2. GitHub CLI コマンド集
 
 > ref.
