@@ -92,11 +92,12 @@ git version 2.43.0.windows.1
 - 「Let Git decide」を選択し「Next」
 - 「Git from the command line and also from 3rd-party software」を選択し「Next」
 - 「Use bundled OpenSSL」を選択し「Next」
+- 「Use the OpenSSL library」を選択し「Next」
 - 「Checkout Windows-style, commit Unix-style line endings」を選択し「Next」
 - 「Use MinTTY (the default terminal of MSYS2)」を選択し「Next」
-- 「Default (fast-forward or merge)」を選択し「Next」
+- 「fast-forward or merge」を選択し「Next」
 - 「Git Credential Manager」を選択し「Next」
-- なにもチェックせずに「Install」
+- そのまま「Next」して、なにもチェックせずに「Install」
 - 「Completing the Git Setup Wizard」と表示されれば終了
 
 ### 2.2.2. 環境設定
