@@ -98,12 +98,52 @@ Web上にファイル群を保存し、各PCからGitを通して変更履歴の
   - あるブランチの内容を、他のブランチに取り込むよう依頼すること
   - 異なるリポジトリのブランチでもプルリクエストは行える
   - 略称: プルリク、PR
+- イシュー (Issue)
+  - リポジトリの中で、問題点を挙げることができる
+  - ToDoリストのように使えて、担当者を決めることもできる
 
 ---
 
 # 3. GitHubを使おう
 
-## 3.1. 実際の開発の流れ
+## 3.1. 拡張機能の導入
+
+### 3.1.1. 一般編
+
+- GitHub Pull Requests
+  - VSCode上でプルリクエストやイシューの閲覧・管理ができる
+  - イシューに対応して自動的にブランチ/チェックアウトができる！
+  - めちゃくちゃ便利
+
+### 3.1.2. Web開発編
+
+- HTML CSS Support
+  - HTMLやCSSファイルの入力サポートをしてくれる
+  - 便利
+- JavaScript (ES6) code snippets
+  - JavaScriptファイルの入力サポートをしてくれる
+  - 便利
+- Live Preview
+  - VSCode上でHTMLファイルなどを開いて表示の確認・プレビューができる
+  - めちゃくちゃ便利
+
+### 3.1.3. Markdown作成編
+
+Markdownファイル(.md)とは、今あなたが見ているこれです  
+HTML（マークアップ）とは違って、簡単な記法で文章の構造を示せます  
+GitHub上ではMarkdown形式が使えるので便利
+
+- Markdown All in One
+  - Markdown作成のキーボードショートカットを提供
+  - 便利
+- Live Preview
+  - VSCode上でmdファイルも表示の確認・プレビューができる
+  - めちゃくちゃ便利
+- Markdown Preview Mermaid Support
+  - フローチャートを作れるMermaidもプレビューで表示される
+  - 便利
+
+## 3.2. 実際の開発の流れ
 
 ```mermaid
 flowchart LR
@@ -111,7 +151,7 @@ flowchart LR
 clone[Clone]
 branch[Branch]
 checkout[Checkout]
-develop[Develop]
+coding[Coding]
 push[Push]
 pull[Pull]
 marge[Marge]
@@ -119,14 +159,14 @@ pr[Pull Request]
 commit[Commit]
 push'[Push]
 
-clone & pull -->|Mainブランチで| develop
-clone & pull --> branch --> checkout --> develop ==> commit ==> push
+clone & pull --> branch -->|"(Issueをもとに)"| checkout --> coding --> commit --> push
+clone & pull -->|Mainブランチで| coding
 push' -..-> pr -.-> marge
 ```
 
 > cf. <https://backlog.com/ja/git-tutorial/pull-request/03/>
 
-### 3.1.1. ローカルリポジトリの作成
+### 3.2.1. ローカルリポジトリの作成
 
 - クローンしたいリポジトリを開いて![<> Code ▼](images/code.png)をクリックし、![copy button](images/copy.png)からURLをコピーする
 - VSCode上で![エクスプローラー](images/explorer.png)を開き、「リポジトリの複製」をクリックする
@@ -134,12 +174,17 @@ push' -..-> pr -.-> marge
 - データを保存したい適当なフォルダを宛先として選択する
 - 開くと完了。ローカルリポジトリの作成 done!
 
-### 3.1.2. VSCode上でGitHubのコマンドを使う
+### 3.2.2. VSCode上でGitHubのコマンドを使う
 
 - VSCode上で![ソース管理](images/source.png)を開き、![dot menu](images/menu.png)から色々なGitコマンドを実行することができる
+- GitHub Pull Requestsを導入していれば
+  - VSCode上で![GitHub Pull Requests](images/vscode_pr.png)を開き、「イシュー」からリポジトリ内のイシューを確認できる
+  - イシューに合わせてブランチの作成とチェックアウトができる
+  - その状態で![ソース管理](images/source.png)からコミットすると、プルリクエストを送ることもできる
+  - タイトルは「（どのファイルの）なんの機能を修正したか」にして、コメントは下に書き込んで✓でプルリクエストの送信が完了する
 - bashターミナルを起動してGitコマンドを打つことでも実行できるが、今回は省略
 
-## 3.2. GitHub CLI コマンド集
+## 3.3. GitHub CLI コマンド集
 
 > ref.
 >
