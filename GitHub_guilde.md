@@ -177,10 +177,11 @@ push' -..-> pr -.-> marge
 ### 3.2.2. VSCode上でGitHubのコマンドを使う
 
 - VSCode上で![ソース管理](images/source.png)を開き、![dot menu](images/menu.png)から色々なGitコマンドを実行することができる
-- GitHub Pull Requestsを導入していれば
-  - VSCode上で![GitHub Pull Requests](images/vscode_pr.png)を開き、「イシュー」からリポジトリ内のイシューを確認できる
-  - イシューに合わせてブランチの作成とチェックアウトができる
-  - その状態で![ソース管理](images/source.png)からコミットすると、右下のポップアップからプルリクエストを送ることもできる
+- GitHub Pull Requestsを導入していればVSCode上で![GitHub Pull Requests](images/vscode_pr.png)を開き、「イシュー」からリポジトリ内のイシューを確認できる
+  - ローカルで編集をする
+  - ![GitHub Pull Requests](images/vscode_pr.png)を開き、「イシュー」のタブの中から修正したイシューにホバーして![適切なイシュー](images/issue_arrow.png)を押せばブランチを切ってチェックアウトしてくれる
+  - その状態で![ソース管理](images/source.png)からそのままコミットする
+  - 右下のポップアップから「Pull Requestを送信」をする
   - 左のタブでそのまま「Create」を押すと、プルリクエストの送信が完了する
   - プルリクエスト後はレビューをしてもらう必要があるので待ち……
 - bashターミナルを起動してGitコマンドを打つことでも実行できるが、今回は省略
