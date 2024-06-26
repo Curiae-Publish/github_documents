@@ -40,12 +40,12 @@ Web上にファイル群を保存し、各PCからGitを通して変更履歴の
 ### 2.1.2. 用語
 
 > [!NOTE]
-> [サル先生のGit入門](https://backlog.com/ja/git-tutorial/)はイラスト付きで分かりやすい
+> <a href="https://backlog.com/ja/git-tutorial/" target="_blank" rel="noopener noreferrer">サル先生のGit入門</a>はイラスト付きで分かりやすい
 > 見出し語にリンクを貼り付けているのでぜひ確認を
 
 #### 2.1.2.1. 一般編
 
-- [リポジトリ](https://backlog.com/ja/git-tutorial/intro/02/) (Repository)
+- <a href="https://backlog.com/ja/git-tutorial/intro/02/" target="_blank" rel="noopener noreferrer">リポジトリ</a> (Repository)
   - バージョン管理をされるファイル群（フォルダ）の情報が詰まったデータベースのようなもの
 
 > [!IMPORTANT]
@@ -58,14 +58,14 @@ Web上にファイル群を保存し、各PCからGitを通して変更履歴の
   - ネットワーク上で管理されるリポジトリ、今回はGitHub上にある
 
 > [!NOTE]
-> [この記事の図](https://qiita.com/Coa3/items/d0a43b22a130f74a2685#2-git%E3%82%92%E7%90%86%E8%A7%A3%E3%81%99%E3%82%8B)を見るとわかりやすい
+> <a href="https://qiita.com/Coa3/items/d0a43b22a130f74a2685#2-git%E3%82%92%E7%90%86%E8%A7%A3%E3%81%99%E3%82%8B" target="_blank" rel="noopener noreferrer">この記事の図</a>を見るとわかりやすい
 
-- [コミット](https://backlog.com/ja/git-tutorial/intro/03/) (Commit)
+- <a href="https://backlog.com/ja/git-tutorial/intro/03/" target="_blank" rel="noopener noreferrer">コミット</a>(Commit)
   - 作業フォルダの内容を、ローカルリポジトリ（特定のブランチ）に記録すること
 - メインブランチ (Main Branch)
   - リポジトリの主となるブランチ
   - 基本的に異常がない状態にされる
-- [ブランチ](https://backlog.com/ja/git-tutorial/stepup/01/) (Branch)
+- <a href="https://backlog.com/ja/git-tutorial/stepup/01/" target="_blank" rel="noopener noreferrer">ブランチ</a>(Branch)
   - あるブランチから分岐させたブランチを作成すること
 - チェックアウト (Checkout)
   - コミット先のブランチを変更すること
@@ -73,24 +73,24 @@ Web上にファイル群を保存し、各PCからGitを通して変更履歴の
 
 #### 2.1.2.2. Git-GitHub間編
 
-- [クローン](https://backlog.com/ja/git-tutorial/intro/10/) (Clone)
+- <a href="https://backlog.com/ja/git-tutorial/intro/10/" target="_blank" rel="noopener noreferrer">クローン</a> (Clone)
   - リモートリポジトリ（の特定のブランチ）の内容をコピーし、ローカルリポジトリにコピーすること
-- [マージ](https://backlog.com/ja/git-tutorial/stepup/04/) (Marge)
+- <a href="https://backlog.com/ja/git-tutorial/stepup/04/" target="_blank" rel="noopener noreferrer">マージ</a> (Marge)
   - あるブランチを他のブランチ（例えばMainブランチ）に取り込むこと
   - プルもプッシュもマージしていると捉えられる
-- [プル](https://backlog.com/ja/git-tutorial/intro/11/) (Pull)
+- <a href="https://backlog.com/ja/git-tutorial/intro/11/" target="_blank" rel="noopener noreferrer">プル</a> (Pull)
   - （現在のブランチの）リモートリポジトリの変更内容をローカルリポジトリに反映させること
   - クラウドからダウンロードするようなもの
-- [プッシュ](https://backlog.com/ja/git-tutorial/intro/09/) (Push)
+- <a href="https://backlog.com/ja/git-tutorial/intro/09/" target="_blank" rel="noopener noreferrer">プッシュ</a> (Push)
   - （現在のブランチの）ローカルリポジトリの変更内容をリモートリポジトリに反映させること
   - クラウドにアップロードするようなもの
 
-> [!NOTE]
+<!-- > [!NOTE]
 > 現在のブランチではないブランチは、VSCodeのGUI上ではプルされない  
 > プルしたいブランチにチェックアウトしてから、そのブランチでプルしよう  
 > めんどくさい人は`git pull --all`で全てのブランチを取得しちゃおう  
 > （追跡していないブランチは`git fetch --all`だけでいいのかな？わからん  
-> cf. <https://qiita.com/muraikenta/items/e590a380191971f9c4c3>
+> cf. <https://qiita.com/muraikenta/items/e590a380191971f9c4c3> -->
 
 #### 2.1.2.3. GitHub内編
 
@@ -160,7 +160,6 @@ commit[Commit]
 push'[Push]
 
 clone & pull --> branch -->|"(Issueをもとに)"| checkout --> coding --> commit --> push
-clone & pull -->|Mainブランチで| coding
 push' -..-> pr -.-> marge
 ```
 
