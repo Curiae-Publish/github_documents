@@ -14,10 +14,10 @@
 
 すでにアカウントがある人は飛ばしてください
 
-- [GitHub](https://github.com/)にアクセスし、「Email address」にメールアドレスを入れ「Sign up for GitHub」をクリックする
+- <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>にアクセスし、「Email address」にメールアドレスを入れ「Sign up for GitHub」をクリックする
 
 > [!NOTE]  
-> 大学のではなく、個人のメールアドレスで登録してください  
+> 大学のではなく、**個人のメールアドレス**で登録してください  
 > また、メールアドレスは設定しない限り公開されません
 
 - 遷移後のページで「Continue」
@@ -52,7 +52,7 @@
 
 ### 2.1.1. インストール
 
-- [ダウンロードリンク](https://code.visualstudio.com/download)から対応するOSでインストールする
+- <a href="https://code.visualstudio.com/download" target="_blank" rel="noopener noreferrer">ダウンロードリンク</a>から対応するOSでインストールする
 - 特にこだわりがなければ、青いボックスのを選択すればよい
 - ダウンロードしたインストーラを実行する
 - 基本的には「次へ」を選択すればよいが、必要に応じて「デスクトップ上にアイコンを作成する」を選択する
@@ -85,7 +85,7 @@ git version 2.43.0.windows.1
 
 ### 2.2.1. インストール
 
-- [ダウンロードリンク](https://gitforwindows.org/)から「Download」をクリックする
+- <a href="https://gitforwindows.org/" target="_blank" rel="noopener noreferrer">ダウンロードリンク</a>から「Download」をクリックする
 - ダウンロードしたインストーラを実行する
 - 「Choosing the default editor used by git」まで「Next」をクリックする
 - 「Use Visual Studio Code as Git's default editor」を選択し「Next」
@@ -106,11 +106,19 @@ git version 2.43.0.windows.1
 
 ### 2.2.2. 環境設定
 
-- まずはインストールされているか確認
+- VSCodeを再起動してインストールされているか確認
 
-```bash
-git --version
-```
+    ```bash
+    git --version
+    ```
+
+    を実行して
+
+    ```bash
+    git version 2.43.0.windows.1
+    ```
+
+    が帰ってくればOK
 
 - インストールされている場合は初期設定を行う
 - ユーザー名はGitHubと同じものを推奨
@@ -119,7 +127,7 @@ git --version
 git config --global user.name "User Name"
 ```
 
-- メールは[GitHubの設定](https://github.com/settings/emails)から見れる`123456789+username@users.noreply.github.com`という形式を使用することをおすすめする
+- メールは<a href="https://github.com/settings/emails" target="_blank" rel="noopener noreferrer">GitHubの設定</a>から見れる`123456789+username@users.noreply.github.com`という形式を使用することをおすすめする
 
 ```bash
 git config --global user.email "Email Address"
