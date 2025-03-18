@@ -123,9 +123,6 @@ Web上にファイル群を保存し、各PCからGitを通して変更履歴の
 - JavaScript (ES6) code snippets
   - JavaScriptファイルの入力サポートをしてくれる
   - 便利
-- Live Preview
-  - VSCode上でHTMLファイルなどを開いて表示の確認・プレビューができる
-  - めちゃくちゃ便利
 
 ### 3.1.3. Markdown作成編
 
@@ -136,9 +133,6 @@ GitHub上ではMarkdown形式が使えるので便利
 - Markdown All in One
   - Markdown作成のキーボードショートカットを提供
   - 便利
-- Live Preview
-  - VSCode上でmdファイルも表示の確認・プレビューができる
-  - めちゃくちゃ便利
 - Markdown Preview Mermaid Support
   - フローチャートを作れるMermaidもプレビューで表示される
   - 便利
