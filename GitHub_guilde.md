@@ -159,6 +159,8 @@ push' -..-> pr -.-> marge
 
 > cf. <https://backlog.com/ja/git-tutorial/pull-request/03/>
 
+> このような流れを[GitHubフロー](https://docs.github.com/en/get-started/using-github/github-flow)と呼ぶことがある
+
 ### 3.2.1. ローカルリポジトリの作成
 
 - クローンしたいリポジトリを開いて![<> Code ▼](images/code.png)をクリックし、![copy button](images/copy.png)からURLをコピーする
